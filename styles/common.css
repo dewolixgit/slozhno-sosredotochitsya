@@ -3,3 +3,17 @@
     font-size: 18px;
     line-height: 1.3;
 }
+
+.title-decor {
+    font-weight: 700;
+
+    background-color: var(--color-background-accent);
+    color: var(--color-text-accent);
+}
+
+.width-limit {
+    inline-size: 100%;
+    max-inline-size: 1024px;
+    padding: 0 var(--space-content-side);
+    margin: 0 auto;
+}

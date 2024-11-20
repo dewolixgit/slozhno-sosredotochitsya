@@ -1,17 +1,4 @@
 :root {
-    /* Переменные светлой темы */
-    --color-background-primary: #FFF1F7;
-    --color-background-accent: #FF8DCB;
-
-    --color-text-primary: #353430;
-    --color-text-primary-contrast: #353430;
-    --color-text-accent: #353430;
-
-    --color-border-primary: #353430;
-
-    --color-title-level-1: #FFC2E6;
-    --color-shadow-title-level-1: #FF8DCB;
-
     /* Общие переменные */
     --space-xxxxxl: 80px;
     --space-xxxl: 60px;
@@ -19,4 +6,16 @@
     --space-xl: 40px;
     --space-s: 20px;
     --space-xs: 10px;
+
+    /* Отступы по бокам страницы */
+    --space-content-side: 10px;
+
+    --border-radius-cicle: 50%;
+}
+
+
+@media (width >= 768px) {
+    :root {
+        --space-content-side: 20px;
+    }
 }

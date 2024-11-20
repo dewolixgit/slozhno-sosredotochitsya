@@ -4,13 +4,23 @@
   box-sizing: border-box;
 }
 
-body {
+html {
   min-inline-size: 375px;
   max-inline-size: 1440px;
-  margin: 0 auto;
+  min-block-size: 100vh;
+
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
 
   background-color: var(--color-background-primary);
+
   color: var(--color-text-primary);
+  font-family: IBM Plex Mono, monospace;
+
 }
 
 h1,
@@ -40,4 +50,7 @@ a {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
 }

@@ -1,3 +1,189 @@
 /* Основные стили, светлая тема */
 .page {
+    background: var(--background-image-page) center / cover no-repeat;
+    background-attachment: fixed;
+}
+
+.header {
+    position: relative;
+
+    display: grid;
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+
+    block-size: 100vh;
+    min-block-size: 668px;
+
+    padding-block: 18px;
+}
+
+.header::before,
+.header::after {
+    content: "";
+    position: absolute;
+
+    inline-size: 25px;
+    block-size: 25px;
+
+    border: 1px solid var(--color-border-primary);
+}
+
+.header::before {
+    inset-block-start: var(--space-xs);
+    inset-inline-end: var(--space-content-side);
+
+    border-block-end: 0;
+    border-inline-start: 0;
+}
+
+.header::after {
+    inset-block-end: var(--space-xs);
+    inset-inline-start: var(--space-content-side);
+
+    border-block-start: 0;
+    border-inline-end: 0;
+}
+
+.header__theme-menu {
+    justify-self: end;
+    align-self: center;
+}
+
+.header__theme-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.header__theme-menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    block-size: 26px;
+    inline-size: 70px;
+
+    font-size: 18px;
+    line-height: 1;
+
+    color: var(--color-button-text);
+    border: 1px solid transparent;
+
+    transition: border-color 0.3s ease;
+}
+
+/* На десктопах стилизуем ховер */
+@media (hover: hover) {
+    .header__theme-menu-button:not(:disabled):hover {
+        border-color: var(--color-button-border-alpha-40);
+    }
+}
+
+/* На мобилках ховер может залипать, поэтому стилизуем active */
+@media (hover: none) {
+    .header__theme-menu-button:not(:disabled):hover {
+        border-color: var(--color-button-border-alpha-40);
+    }
+}
+
+.header__theme-menu-button_active {
+    border-color: var(--color-button-border);
+}
+
+.header__theme-menu-button:focus-visible {
+    outline: none;
+    border-color:
+        transparent
+        transparent
+        var(--color-button-border)
+        transparent;
+}
+
+.header__title {
+    justify-self: start;
+    align-self: center;
+
+    font-family: IBM Plex Mono, monospace;
+    font-size: clamp(116px, 91px + 3.85vw, 157px);
+    line-height: 0.825;
+    font-weight: 700;
+
+    color: var(--color-title-level-1);
+    text-shadow: 4px 4px 0 var(--color-shadow-title-level-1);
+}
+
+.header__intro {
+    justify-self: end;
+    align-self: center;
+}
+
+.header__record {
+    position: absolute;
+    inset-block-start: var(--space-xs);
+    inset-inline-end: var(--space-content-side);
+
+    block-size: 26px;
+    inline-size: 59px;
+
+    color: var(--color-accent);
+
+    display: none;
+    align-items: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    .page.theme_auto .header__record {
+        display: flex;
+    }
+}
+
+.page.theme_dark .header__record {
+    display: flex;
+}
+
+.header__record::after {
+    content: "";
+    position: absolute;
+    inset-inline-end: 9px;
+    inset-block-start: 50%;
+    transform: translate(0, -50%);
+
+    inline-size: 9px;
+    block-size: 9px;
+    border-radius: var(--border-radius-cicle);
+
+    background-color: var(--color-accent);
+    box-shadow: 0 0 4px 2px var(--color-accent);
+}
+
+@media (width >= 768px) {
+    .header {
+        max-block-size: 1024px;
+    }
+
+    .header::before {
+        top: var(--space-s);
+    }
+
+    .header__intro {
+        inline-size: 364px;
+    }
+
+    .header__record {
+        inset-block-start: var(--space-s);
+    }
+}
+
+@media (width >= 1024px) {
+    .header {
+        max-block-size: 768px;
+    }
+
+    .header__theme-menu {
+        justify-self: center;
+        align-self: start;
+    }
+
+    .header__intro {
+        inline-size: 491px;
+    }
 }

@@ -1,3 +1,61 @@
 .page.theme_light {
+    /* Переменные светлой темы */
 
+    /* Акцентный цвет */
+    --color-accent: #FF8DCB;
+
+    /* Цвет, контрастный основному фоновому цвету */
+    --color-contrast-primary: #353430;
+    --color-contrast-primary-alpha-40: rgba(53, 52, 48, 0.4);
+
+    /* Основной фоновый цвет */
+    --color-background-primary: #FFF1F7;
+    /* Акцентный фоновый цвет */
+    --color-background-accent: var(--color-accent);
+
+    --color-text-primary: var(--color-contrast-primary);
+    --color-text-primary-contrast: var(--color-contrast-primary);
+    --color-text-accent: var(--color-contrast-primary);
+
+    --color-border-primary: var(--color-contrast-primary);
+
+    --color-title-level-1: #FFC2E6;
+    --color-shadow-title-level-1: var(--color-accent);
+
+    --color-button-text: var(--color-contrast-primary);
+    --color-button-border: var(--color-contrast-primary);
+    --color-button-border-alpha-40: var(--color-contrast-primary-alpha-40);
+
+    --background-image-page: url("../images/cover-image-light.png");
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        /* Акцентный цвет */
+        --color-accent: #FF8DCB;
+
+        /* Цвет, контрастный основному фоновому цвету */
+        --color-contrast-primary: #353430;
+        --color-contrast-primary-alpha-40: rgba(53, 52, 48, 0.4);
+
+        /* Основной фоновый цвет */
+        --color-background-primary: #FFF1F7;
+        /* Акцентный фоновый цвет */
+        --color-background-accent: var(--color-accent);
+
+        --color-text-primary: var(--color-contrast-primary);
+        --color-text-primary-contrast: var(--color-contrast-primary);
+        --color-text-accent: var(--color-contrast-primary);
+
+        --color-border-primary: var(--color-contrast-primary);
+
+        --color-title-level-1: #FFC2E6;
+        --color-shadow-title-level-1: var(--color-accent);
+
+        --color-button-text: var(--color-contrast-primary);
+        --color-button-border: var(--color-contrast-primary);
+        --color-button-border-alpha-40: var(--color-contrast-primary-alpha-40);
+
+        --background-image-page: url("../images/cover-image-light.png");
+    }
 }
