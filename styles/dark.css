@@ -3,7 +3,6 @@
     --color-accent-alpha-40: rgba(255, 0, 112, 0.4);
     --color-contrast-primary: #F1B2CE;
 
-
     --color-background-primary: #000028;
     --color-background-accent: var(--color-accent);
 
@@ -29,7 +28,6 @@
         --color-accent: #FF0070;
         --color-accent-alpha-40: rgba(255, 0, 112, 0.4);
         --color-contrast-primary: #F1B2CE;
-
 
         --color-background-primary: #000028;
         --color-background-accent: var(--color-accent);
