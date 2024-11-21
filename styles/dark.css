@@ -49,3 +49,13 @@
         --background-image-page: url("../images/cover-image-dark.png");
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    .page.theme_auto .header__record {
+        display: flex;
+    }
+}
+
+.page.theme_dark .header__record {
+    display: flex;
+}
