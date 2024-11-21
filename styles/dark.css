@@ -11,10 +11,11 @@
     --color-text-primary-contrast: var(--color-accent);
     --color-text-accent: #000028;
 
+    --color-text-primary-shadow: var(--color-accent);
+
     --color-border-primary: var(--color-accent);
 
     --color-title-level-1: #DB00FF;
-    --color-shadow-title-level-1: var(--color-accent);
 
     --color-button-text: var(--color-accent);
     --color-button-border: var(--color-accent);
@@ -37,10 +38,11 @@
         --color-text-primary-contrast: var(--color-accent);
         --color-text-accent: #000028;
 
+        --color-text-primary-shadow: var(--color-accent);
+
         --color-border-primary: var(--color-accent);
 
         --color-title-level-1: #DB00FF;
-        --color-shadow-title-level-1: var(--color-accent);
 
         --color-button-text: var(--color-accent);
         --color-button-border: var(--color-accent);
