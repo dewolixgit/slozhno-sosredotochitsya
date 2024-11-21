@@ -100,7 +100,6 @@
 
 .width-limit {
     inline-size: 100%;
-    max-inline-size: 1024px;
     padding: 0 var(--space-content-side);
     margin: 0 auto;
 }
