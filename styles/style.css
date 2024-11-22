@@ -134,8 +134,7 @@
 }
 
 .factors__list {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: var(--space-s);
 }
 
@@ -273,11 +272,7 @@
     }
 
     .factors__list {
-        flex-direction: row;
-    }
-
-    .factors__list-item {
-        flex: 1 1 0;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .images__list {
